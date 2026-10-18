@@ -148,6 +148,17 @@ Pengujian ini kemudian dilanjutkan dengan camera test untuk melihat kemampuan
 model dalam melakukan klasifikasi secara real-time.
 
 
+### Metodologi Pengukuran Latensi
+
+Pengukuran latensi dilakukan menggunakan fungsi `time.perf_counter()` untuk mencatat waktu sebelum dan sesudah pemanggilan `model.predict()` pada setiap gambar. Selisih waktu tersebut dikonversi ke milidetik (ms) dan dicatat sebagai latensi inferensi per gambar.
+
+Pengujian dilakukan terhadap 40 gambar dari dataset external, yang terdiri dari 20 gambar MG90S dan 20 gambar PCA9685. Rata-rata latensi dihitung dari seluruh hasil pengukuran pada gambar yang diuji.
+
+Perlu diperhatikan bahwa pengukuran mencakup waktu pemanggilan `model.predict()`, sehingga hasilnya dapat dipengaruhi oleh overhead pemanggilan fungsi dan proses inisialisasi pada inferensi pertama. Oleh karena itu, nilai latensi ini merepresentasikan hasil pengukuran pada konfigurasi eksperimen yang digunakan, bukan murni waktu komputasi model pada kondisi yang telah dioptimalkan.
+
+Hasil pengukuran digunakan sebagai referensi untuk membandingkan performa model dalam eksperimen ini. Perbandingan latensi sebaiknya mempertimbangkan konsistensi perangkat keras, framework, dan metode pengukuran yang digunakan.
+
+
 ## 📷 Analisis Real-Time Camera
 
 Model MobileNetV2 V2 juga diuji menggunakan kamera secara real-time untuk
