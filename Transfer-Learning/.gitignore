@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated dataset splits
+/dataset_split/
+/dataset_split_old/
+/dataset_split_new/
+/dataset_split_v2/
+/data/dataset_split/
+/data/dataset_split_old/
+/data/dataset_split_new/
+/data/dataset_split_v2/
+
+# Generated external test datasets
+/external_test/
+/data/external_test_v2/
+
+# Trained models and checkpoints
+*.h5
+*.keras
+*.pth
+*.pt
+*.weights
+
+# Generated experiment results
+/results/*.csv
+/results/*.png
+
+# OS files
+.DS_Store
+Thumbs.db
