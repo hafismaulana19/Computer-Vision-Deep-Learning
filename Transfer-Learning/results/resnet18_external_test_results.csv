@@ -1,0 +1,4 @@
+Mode,External Accuracy (%),Correct,Total,Latency per Image (ms)
+feature,97.50,39,40,5.658
+partial,97.50,39,40,0.673
+scratch,75.00,30,40,0.638

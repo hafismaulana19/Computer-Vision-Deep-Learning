@@ -1,0 +1,5 @@
+model,external_accuracy_percent,latency_ms_per_image
+MobileNetV2,100.0,85.225
+ResNet18 Feature,97.5,5.658
+ResNet18 Partial,97.5,0.673
+ResNet18 Scratch,75.0,0.638
